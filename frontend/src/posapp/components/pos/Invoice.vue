@@ -312,6 +312,7 @@
 			:currencySymbol="currencySymbol"
 			:discount_percentage_offer_name="discount_percentage_offer_name"
 			:isNumber="isNumber"
+			:items="items"
 			@update:additional_discount="(val) => (additional_discount = val)"
 			@update:additional_discount_percentage="(val) => (additional_discount_percentage = val)"
 			@update_discount_umount="update_discount_umount"

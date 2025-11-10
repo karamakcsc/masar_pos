@@ -229,6 +229,7 @@
 							@click="handleShowPayment"
 							class="summary-btn pay-btn"
 							:loading="paymentLoading"
+							:disabled="items?.some(item => !item.custom_sales_person)"
 						>
 							{{ __("PAY") }}
 						</v-btn>
@@ -254,6 +255,7 @@ export default {
 		currencySymbol: Function,
 		discount_percentage_offer_name: [String, Number],
 		isNumber: Function,
+		items: Array,
 	},
 	data() {
 		return {

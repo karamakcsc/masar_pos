@@ -239,38 +239,38 @@
 						class="expanded-content responsive-expanded-content"
 						:class="expandedContentClasses"
 					>
-						<!-- Sales Person field -->
-						<div class="form-section">
-								<div class="section-header">
-										<v-icon size="small" class="section-icon">mdi-account</v-icon>
-										<span class="section-title">{{ __("Sales Person") }}</span>
-								</div>
-								<div class="form-row">
-										<div class="form-field">
-												<v-select
-														density="compact"
-														class="pos-themed-input"
-														:label="frappe._('Sales Person')"
-														v-model="item.custom_sales_person"
-														:items="sales_persons"
-														variant="outlined"
-														item-title="title"
-														item-value="value"
-														hide-details="auto"
-														:rules="[v => !!v || __('Sales Person is required')]"
-														required
-														@update:model-value="(val) => (item.custom_sales_person = val)"
-														:disabled="
-														!!item.posa_is_replace ||
-														(isReturnInvoice && invoice_doc.return_against)
-														"
-														prepend-inner-icon="mdi-account"
-												></v-select>
-										</div>
-								</div>
-						</div>
 						<!-- Item Details Form -->
 						<div class="item-details-form">
+							<!-- Sales Person field -->
+							<div class="form-section">
+									<div class="section-header">
+											<v-icon size="small" class="section-icon">mdi-account</v-icon>
+											<span class="section-title">{{ __("Sales Person") }}</span>
+									</div>
+									<div class="form-row">
+											<div class="form-field">
+													<v-select
+															density="compact"
+															class="pos-themed-input"
+															:label="frappe._('Sales Person')"
+															v-model="item.custom_sales_person"
+															:items="sales_persons"
+															variant="outlined"
+															item-title="title"
+															item-value="value"
+															hide-details="auto"
+															:rules="[v => !!v || __('Sales Person is required')]"
+															required
+															@update:model-value="(val) => (item.custom_sales_person = val)"
+															:disabled="
+															!!item.posa_is_replace ||
+															(isReturnInvoice && invoice_doc.return_against)
+															"
+															prepend-inner-icon="mdi-account"
+													></v-select>
+											</div>
+									</div>
+							</div>
 							<!-- Basic Information Section -->
 							<div class="form-section">
 								<div class="section-header">
